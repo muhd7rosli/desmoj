@@ -93,8 +93,8 @@ abstract class CommandFrame implements CommandSyntax, Cloneable{
 				else if(quantifier.equals("?")) {parameter[j] = new Parameter(type, 0, 1); }
 				
 				// x..y means all values between x and y
-				else if(quantifier.indexOf("..") >= 0) {
-					int k = quantifier.indexOf("..");
+				else if(quantifier.indexOf("") >= 0) {
+					int k = quantifier.indexOf("");
 					try{
 						int len	= quantifier.length();
 						if(quantifier.length() > k+2){
@@ -466,7 +466,7 @@ abstract class CommandFrame implements CommandSyntax, Cloneable{
 			Parameter p = this.getParameter(j);
 			if(p != null){
 				String max = (p.getMax() == Integer.MAX_VALUE? "inf" : Integer.toString(p.getMax()));
-				out += "         parameter  : "+p.getTyp()+" possibleCounts: "+p.getMin()+".."+max+" values: ";
+				out += "         parameter  : "+p.getTyp()+" possibleCounts: "+p.getMin()+ "" +max+" values: ";
 				for(int i=0; i<p.getValues().length; i++) out += p.getValues()[i]+", ";
 				out += nl;
 			}else{

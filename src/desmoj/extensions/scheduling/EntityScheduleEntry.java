@@ -364,7 +364,7 @@ public class EntityScheduleEntry {
 		f = new Formatter(sb, Locale.US);
 		f.format("%7s", " time: ");
 		f.format("%10s", timeFormat.buildTimeString(this.fromBeginOfDay));
-		f.format("%2s", "..");
+		f.format("%2s", "");
 		f.format("%10s", timeFormat.buildTimeString(
 				TimeOperations.add(this.fromBeginOfDay, duration)));
 		out += sb.toString()+"\n";
@@ -382,7 +382,7 @@ public class EntityScheduleEntry {
 			sb = new StringBuilder();
 			f = new Formatter(sb, Locale.US);
 			f.format("%10s",  timeFormat.buildTimeString(this.validFrom));
-			f.format("%2s", "..");
+			f.format("%2s", "");
 			f.format("%10s",  timeFormat.buildTimeString(this.validUntil));
 		}
 		out += sb.toString()+"\n";
