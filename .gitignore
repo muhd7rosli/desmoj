@@ -1,3 +1,10 @@
 .idea/
 .gradle/
 build/
+build.gradle
+desmoj-master.iml
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
+settings.gradle
